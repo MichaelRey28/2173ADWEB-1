@@ -1,1 +1,12 @@
-<p>news works!</p>
+<div class="news-container">
+    <h1>News</h1>
+    <div class="row">
+      <div *ngFor="let article of articles" class="article col-md-4">
+        <img [src]="article.imageUrl" alt="{{ article.title }}">
+        <h3 class="article-title">{{ article.title }}</h3>
+        <p class="article-content">{{ article.content }}</p>
+        <p class="published-date">Published on: {{ article.publishedDate | date }}</p>
+      </div>
+    </div>
+  </div>
+  
